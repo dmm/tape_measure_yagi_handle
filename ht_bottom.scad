@@ -3,7 +3,8 @@ include <nutsnbolts/cyl_head_bolt.scad>; // https://github.com/JohK/nutsnbolts
 $fa = 1;
 $fs = 0.4;
 
-handle_length=60;
+handle_length=120;
+pipe_radius=22/2;
 
 // main body with cutout for pipe
 rotate([180, 0, 0])
@@ -14,7 +15,7 @@ rotate([180, 0, 0])
 
         // bottom cylinder to hold pipe
         translate([0, -(17.46/2), 0])
-            cylinder(h = 80, r = 10.545, center=true);
+            cylinder(h = 80, r = pipe_radius, center=true);
 
         // nut holes
         translate([-28.18/2, -65.09/2, (17.46)/2])
@@ -40,7 +41,7 @@ rotate([180, 0, 0])
 
 // handle
 difference() {
-    translate([0, 0, -(handle_length/2)+10])
+    translate([0, 10, -(handle_length/2)+10])
         rotate([18, 0, 0])
         difference() {
             cube([20, 50, handle_length], center = true);

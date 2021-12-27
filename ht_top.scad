@@ -3,6 +3,8 @@ include <nutsnbolts/cyl_head_bolt.scad>; // https://github.com/JohK/nutsnbolts
 $fa = 1;
 $fs = 0.4;
 
+pipe_radius=22/2;
+
 ///// dimensions for ht clip mount box (choose baofeng or ft60r)
 //// original (baofeng)
 //mnt_width = 22.23;
@@ -29,7 +31,7 @@ difference() {
 
     // bottom cylinder to hold pipe
     translate([0, -(17.46/2), 0])
-        cylinder(h = 80, r = 10.545, center=true);
+        cylinder(h = 80, r = pipe_radius, center=true);
     
     // nut holes
     translate([-28.18/2, -65.09/2, (17.46)/2])
