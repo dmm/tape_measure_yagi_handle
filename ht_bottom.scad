@@ -4,7 +4,8 @@ $fa = 1;
 $fs = 0.4;
 
 handle_length=120;
-pipe_radius=22/2;
+pipe_radius=10.545;
+bolt_clearance=0.2;
 
 // main body with cutout for pipe
 rotate([180, 0, 0])
@@ -21,22 +22,22 @@ rotate([180, 0, 0])
         translate([-28.18/2, -65.09/2, (17.46)/2])
             nutcatch_parallel("M3", clh=0.1);
         translate([-28.18/2, -65.09/2, 50+(17.46)/2])
-            hole_through(name="M3", l=50+5+10, cld=0.1, h=10, hcld=0.4);
+            hole_through(name="M3", l=50+5+10, cld=bolt_clearance, h=10, hcld=0.4);
 
         translate([28.18/2, -65.09/2, (17.46)/2])
             nutcatch_parallel("M3", clh=0.1);
         translate([28.18/2, -65.09/2, 50+(17.46)/2])
-            hole_through(name="M3", l=50+5+10, cld=0.1, h=10, hcld=0.4);
+            hole_through(name="M3", l=50+5+10, cld=bolt_clearance, h=10, hcld=0.4);
 
         translate([-28.18/2, 65.09/2, (17.46)/2])
             nutcatch_parallel("M3", clh=0.1);
         translate([-28.18/2, 65.09/2, 50+(17.46)/2])
-            hole_through(name="M3", l=50+5+10, cld=0.1, h=10, hcld=0.4);
+            hole_through(name="M3", l=50+5+10, cld=bolt_clearance, h=10, hcld=0.4);
 
         translate([28.18/2, 65.09/2, (17.46)/2])
             nutcatch_parallel("M3", clh=0.1);
         translate([28.18/2, 65.09/2, 50+(17.46)/2])
-            hole_through(name="M3", l=50+5+10, cld=0.1, h=10, hcld=0.4);
+            hole_through(name="M3", l=50+5+10, cld=bolt_clearance, h=10, hcld=0.4);
     }
 
 // handle
